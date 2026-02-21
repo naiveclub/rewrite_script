@@ -1,0 +1,16 @@
+#!name = QQ经典农场Code拦截
+#!desc = 拦截微信端QQ经典农场的登录Code，防止Code被消耗，并通过通知推送显示Code
+#!author = Naive
+#!icon = leaf.fill
+#!category = Tool
+#!openUrl =
+#!tag = QQ农场
+
+[Argument]
+enabled = switch,false,拦截开关,进入游戏前开启以拦截并获取Code
+
+[Script]
+http-request ^https?://gate-obt\.nqf\.qq\.com/prod/ws\? script-path=nqf_code.js, requires-body=0, timeout=10, tag=QQ农场Code拦截, enabled={enabled}
+
+[MITM]
+hostname = gate-obt.nqf.qq.com
