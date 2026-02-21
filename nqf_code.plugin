@@ -10,8 +10,9 @@
 enabled = switch,false,拦截开关,进入游戏前开启以拦截并获取Code
 
 [Script]
-http-request ^https?://gate-obt\.nqf\.qq\.com/prod/ws\? script-path=https://raw.githubusercontent.com/naiveclub/rewrite_script/refs/heads/main/nqf_code.js, requires-body=0, timeout=10, tag=QQ农场Code拦截, enabled={enabled}
+http-request ^https?://gate-obt\.nqf\.qq\.com/prod/ws\? script-path=nqf_code.js, requires-body=0, timeout=10, tag=QQ农场Code拦截, enabled={enabled}
 
 [MITM]
 hostname = gate-obt.nqf.qq.com
+
 
